@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mytable tr.header,#mytable tr:hover{
+            background-color: yellowgreen;
+
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: cente; text-transform: uppercase; color: blue;">filter</h2>
+    <input type="text" name="" id="myinput" placeholder="name" onkeyup="searhfun()">
+    <table id="mytable">
+        <tr class="header">
+            <th style="width: 40%;">Name</th>
+            <th style="width: 30%;">Degree</th>
+             <th style="width: 30%;">Professiion</th>
+ 
+        </tr>
+        <tr>
+            <td>Vinod</td>
+            <td>Msc</td>
+            <td>Fullstack Developer</td>
+        </tr>
+        
+        <tr>
+            <td>Amit</td>
+            <td>BBA</td>
+            <td>Backend Developer</td>
+        </tr>
+        
+        <tr>
+            <td>Arun</td>
+            <td>Bca</td>
+            <td>web Developer</td>
+        </tr>
+        
+        <tr>
+            <td>Akash</td>
+            <td>Msc</td>
+            <td>Fullstack Developer</td>
+        </tr>
+        
+        <tr>
+            <td>Monu</td>
+            <td>BBA</td>
+            <td>manager</td>
+        </tr>
+        
+        <tr>
+            <td>Sonu</td>
+            <td>Mba</td>
+            <td>Team leader</td>
+        </tr>
+        
+        <tr>
+            <td>Akshay</td>
+            <td>M.Tech</td>
+            <td>Manager</td>
+        </tr>
+        
+        <tr>
+            <td>Ritesh</td>
+            <td>BBA</td>
+            <td>Hr Manager</td>
+        </tr>
+        
+        <tr>
+            <td>Ravi</td>
+            <td>b.Teck</td>
+            <td>Fullstack Developer</td>
+        </tr>
+    </table>
+    <script>
+        let searhfun=()=>{
+            let filter=document.getElementById("myinput").value.toUpperCase();
+            let mytable=document.getElementById("mytable");
+            let tr=mytable.getElementsByTagName("tr");
+            for(var i=0; i<tr.length;i++){
+                let td=tr[i].getElementsByTagName("td")[0];
+                if(td){
+                    let textvalue = td.textcontent || td.innerHTML;
+                    if(textvalue.toUpperCase().indexof(filter) >-1 ){
+                        tr[i].style.display="";
+                    }else{
+                        tr[i].style.display="none";
+                    }
+                }
+            }
+        }
+        //function searhfun() { }
+            
+        
+    </script>
+    
+</body>
+</html>
