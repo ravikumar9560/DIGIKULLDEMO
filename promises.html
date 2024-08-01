@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//promises
+
+// let promise=new promise((resolve,reject)=>{
+//     console.log("I am Promise");
+//     resolve("success");
+// //reject("some error");
+// });
+     //
+    //  function getData(dataId,getNextData) {
+    //     return new promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             console.log("data",dataId);
+    //             resolve("success");
+    //             if(getNextData){
+    //                 getNextData();
+    //             }
+    //         },5000)
+    //     });
+        
+        
+    //  }
+    // function getData(dataId,getNextData){
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             console.log("data",dataId);
+    //             resolve("success");
+    //             if(getNextData){
+    //                 getNextData();
+
+    //             }
+    //         },5000)
+    //     });
+    // }
+    // //
+//     // function getData(dataId,getNextData){
+//     //     return new promise((resolve,reject)=>{
+//     //         setTimeout(()=>{
+//     //             reject("error");
+//     //             if(getNextData){
+//     //                 getNextData();
+//     //             }
+                
+//     //         },2000)
+//     //     });
+//     // }
+//     //Then()&catch()
+//     // promise.Then((res)=>{})
+//     //     promise.catch((err))=>{
+//     // })
+//     //
+//     // const getpromise=()=>{
+//     //     return new promise((resolve,reject)=>{
+//     //         console.log("i am a promise");
+//     //         resolve("success");
+//     //     });
+//     // };
+//     // let promise=getpromise();
+//     // promise.then(()=>{
+//     //     console.log("promise fullfilled");
+//     // });
+//     //promises
+//     //const promiseOne=new promise(function(resolve,reject){
+//         //setTimeout(function(){
+//        //     console.log("Asyn is complete");
+//      //   },2000  )
+//    // })
+// //promises 1
+// const PromiseOne=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("hello Ravi");
+//         resolve("success");
+//     },2000)
+// })
+// PromiseOne.then((res)=>{
+//     console.log(" Promise consumed 1",res);
+// })
+// //2
+// new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         console.log("hello ravi 2");
+//         resolve();
+//     },5000)
+// })
+// .then(function(){
+//     console.log("promise consumed 2");
+// })   
+//2
+// function getData(dataId,getNextData)         {
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data","dataId");
+//             resolve("success");
+//             if(getNextData){
+//                 getData();
+//             }
+//         },4000)
+//     });
+    
+// }
+//promises 3
+// const PromiseThree=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error=true
+//         if(!error){
+//         resolve({user:"chai",email:"chai@gmail.com"})
+//     }else{
+//         reject("error")
+
+//     }
+//     },2000)
+    
+// });
+// PromiseThree.then((res) => {
+//     console.log("ravi", res);
+// }).catch((err) => {
+//     console.log("!ravi", err);
+// });
+//
+// const PromiseThree = new Promise(function(resolve, reject) {
+//     setTimeout(function() {
+//         let error =false;  // Set to false to resolve the promise
+//         if (!error) {
+//             resolve({ user: "chai", email: "chai@gmail.com" });
+//         } else {
+//             reject("error");
+//         }
+//     }, 2000);
+// });
+
+// PromiseThree.then((res) => {
+//     console.log("ravi", res);
+// }).catch((err) => {
+//     console.log("!ravi", err);
+// });
+//
+const PromiseThree = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        let error = false;  // Set to false to resolve the promise
+        if (!error) {
+            resolve({ user: "chai", email: "chai@gmail.com" });
+        } else {
+            reject("error");
+        }
+    }, 2000);
+});
+
+PromiseThree.then((res) => {
+    console.log("ravi", res);
+}).catch((err) => {
+    console.log("!ravi", err);
+});
+//
+
+
+function getData(dataId,getNextData){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("data",dataId);
+                resolve("success");
+                if(getNextData){
+                    getNextData();
+
+                }
+            },5000)
+        });
+    }
+
+
+    const PromiseThre = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          let error = false;
+          if (!error) {
+            resolve({ user: "javascript", password: "123" });
+          } else {
+            reject("error");
+          }
+        }, 2000);
+      });
+
+      async function consumePromiseThree() {
+        try {
+          const responsive = await PromiseThree;
+          console.log(responsive);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      consumePromiseThre();
+// const PromiseThree=new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let  error=false
+//         if(!error){
+//             resolve({user:"javascript",password:"123"})
+//         }else{
+//             reject("error")
+//         }
+        
+//     },2000)
+// });
+
+// //
+// async function consume PromiseThree(){
+//     try{
+//         const responsive=await PromiseThree
+//         console.log(response)
+//     } .catch.(error){
+//         consume
+//         console.log(error);
+//     }
+
+// }
+
+// consume PromiseThree()
+
+
+
+
+    </script>
+    
+</body>
+</html>
