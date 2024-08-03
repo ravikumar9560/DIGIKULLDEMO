@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  //   function getData(dataid) {setTimeout(()=>{
+    //    console.log("data",dataid);
+    // },2000);
+        
+//     //  }
+//     //  getData(1);
+//     //  getData(2);
+//      //callback Hell
+//  function getData(dataId,getNextData){
+//     setTimeout(()=>{
+//         console.log("data",dataId);
+//        if(getNextData){
+//             getNextData();
+//         }
+//  },2000)
+//  }
+// getData(1,()=>{
+//     getData(2,()=>{
+//         getData(3,()=>{
+//             getData(4);
+//         });
+//     });
+// });
+// // ////
+// function getData(dataId,getNextData){
+//     setTimeout(()=>{
+//         console.log("data",dataId);
+//        if(getNextData){
+//             getNextData();
+//         }
+//  },4000)
+//  }
+// getData(1,()=>{
+//     getData(2)});
+    
+//      }
+//promises
+
+// let promise=new promise((resolve,reject)=>{
+//     console.log("I am Promise");
+//     resolve("success");
+// //reject("some error");
+// });
+     //
+    //  const PromiseThree = new Promise(function (resolve, reject) {
+    //     setTimeout(function () {
+    //       let error = false;
+    //       if (!error) {
+    //         resolve({ user: "javascript", password: "123" });
+    //       } else {
+    //         reject("error");
+    //       }
+    //     }, 2000);
+    //   });
+
+    //   async function consumePromiseThree() {
+    //     try {
+    //       const responsive = await PromiseThree;
+    //       console.log(responsive);
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   }
+
+    //   consumePromiseThree();
+        
+        
+    //  }
+    // function getData(dataId,getNextData){
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             console.log("data",dataId);
+    //             resolve("success");
+    //             if(getNextData){
+    //                 getNextData();
+
+    //             }
+    //         },5000)
+    //     });
+    // }
+    // //
+//     // function getData(dataId,getNextData){
+//     //     return new promise((resolve,reject)=>{
+//     //         setTimeout(()=>{
+//     //             reject("error");
+//     //             if(getNextData){
+//     //                 getNextData();
+//     //             }
+                
+//     //         },2000)
+//     //     });
+//     // }
+//
+  function getData(dataId,getNextData){
+     setTimeout(()=>{
+         console.log("data",dataId);
+        if(getNextData){
+             getNextData();
+         }
+  },2000)
+  }
+ getData(1,()=>{
+     getData(2,()=>{
+         getData(3,()=>{
+             getData(4);
+         });
+    });
+});
+
+
+
+    </script>
+
+</body>
+</html>
+
